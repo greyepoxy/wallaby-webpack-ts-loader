@@ -27,7 +27,7 @@
     "prettier": "^1.18.2",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
-    "webpack": "^4.39.1"
+    "webpack": "^5.25.0"
   },
   "dependencies": {
     "has-symbols": "^1.0.1",
