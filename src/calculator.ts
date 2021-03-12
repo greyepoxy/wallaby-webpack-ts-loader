@@ -1,7 +1,12 @@
+import * as React from 'react';
+
 interface Operation {
   operation: string;
   x: number;
   y?: number;
+}
+
+export class TestComponent extends React.PureComponent<{}, {}> {
 }
 
 export class Calculator {
