@@ -1,9 +1,11 @@
+const webpack = require('webpack');
+
 module.exports = config = {
   mode: 'development',
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'ts-loader',
@@ -25,9 +27,14 @@ module.exports = config = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js']
   },
   optimization: {
     moduleIds: 'named'
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"development"'
+    })
+  ]
 };
