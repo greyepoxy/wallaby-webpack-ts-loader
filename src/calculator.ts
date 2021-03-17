@@ -7,6 +7,9 @@ interface Operation {
 }
 
 export class TestComponent extends React.PureComponent<{}, {}> {
+  render() {
+    return React.createFactory('div');
+  }
 }
 
 export class Calculator {
